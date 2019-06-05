@@ -24,6 +24,7 @@ int main()
 	//	Присвоение значений переменным
 	GetGroupAndName = (PGetGroupAndName)GetProcAddress(hDll, "_GetGroupAndName");
 	//	Использование функций
+	cout << "Hello!!"
 	(*GetGroupAndName)();
 	//	Выгружаем библиотеку
 	FreeLibrary(hDll);
