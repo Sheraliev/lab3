@@ -8,6 +8,11 @@
 
 using namespace std;
 typedef void(__stdcall *PGetGroupAndName)();
+void GetInfo()
+{
+	cout << "Ural Federal University"
+}
+
 
 int main()
 {
@@ -25,6 +30,7 @@ int main()
 	GetGroupAndName = (PGetGroupAndName)GetProcAddress(hDll, "_GetGroupAndName");
 	//	Использование функций
 	cout << "Hello!!"
+		GetInfo();
 	(*GetGroupAndName)();
 	//	Выгружаем библиотеку
 	FreeLibrary(hDll);
