@@ -16,7 +16,7 @@ int main()
 	//	Обработка случая отсутствия библиотеки
 	if (hDll == NULL)
 	{
-		cout << "Error!" << endl;
+		cout << "Failed to load MYDLL.dll!" << endl;
 		return 1;
 	}
 	//	Определение переменных, которые будут указателями на вызываемые функции
@@ -28,5 +28,6 @@ int main()
 	(*GetGroupAndName)();
 	//	Выгружаем библиотеку
 	FreeLibrary(hDll);
+	
 
 }	
